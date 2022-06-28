@@ -20,7 +20,7 @@
         </jdbcConnection>
         <javaTypeResolver>
             <property name="useJSR310Types" value="true"/>
-        </javaTypeResolver>
+        </javaTypeResolver>/
         <javaModelGenerator
                 targetPackage="jp.ac.it_college.std.s21023.news_manager.infrastructure.database.record"
                 targetProject="src/main/kotlin">
