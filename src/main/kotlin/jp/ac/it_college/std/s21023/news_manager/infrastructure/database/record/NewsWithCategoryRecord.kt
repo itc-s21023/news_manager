@@ -1,14 +1,14 @@
 package jp.ac.it_college.std.s21023.news_manager.infrastructure.database.record
 
-import java.time.LocalDate
-import java.time.LocalDateTime
+import java.sql.Timestamp
 
 data class NewsWithCategoryRecord(
     var id: Long? = null,
     var title: String? = null,
-    var author: String? = null,
-    var releaseDate: LocalDate? = null,
+    var categoryId: Long? = null,
+    var createAt: Timestamp? = null,
+    var publishAt: Timestamp? = null,
     var userId: Long? = null,
-    var rentalDatetime: LocalDateTime? = null,
-    var returnDeadline: LocalDateTime? = null
+    var body: String? = null,
+    var name: String? = null,
 )

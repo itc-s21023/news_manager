@@ -49,7 +49,7 @@ fun NewsWithCategoryMapper.select(completer: SelectCompleter): List<NewsWithCate
         completer()
     }.run(this::selectMany)
 
-fun NewsWithCategoryMapper.selectByPrimaryKey(id_ :Long, completer: SelectCompleter): NewsWithCategoryRecord? = select(columnList) {
+fun NewsWithCategoryMapper.selectByPrimaryKey(id_: Long): NewsWithCategoryRecord? = select(columnList) {
     from(news, "n")
     leftJoin(category, "c") {
         on(news.id) equalTo category.id
@@ -57,6 +57,5 @@ fun NewsWithCategoryMapper.selectByPrimaryKey(id_ :Long, completer: SelectComple
     where {
         id isEqualTo id_
     }
-    completer()
 }.run ( this::selectOne)
 
