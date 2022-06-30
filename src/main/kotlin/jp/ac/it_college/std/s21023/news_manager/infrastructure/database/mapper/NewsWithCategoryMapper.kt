@@ -21,7 +21,7 @@ import org.mybatis.dynamic.sql.util.kotlin.mybatis3.select
 interface NewsWithCategoryMapper {
     @SelectProvider(type = SqlProviderAdapter::class, method = "select")
     @Results(
-        id = "NewsWithCategoryRecordResult", value = [
+        id = "NewsWithCategoryResult", value = [
             Result(column = "id", property = "id", jdbcType = JdbcType.BIGINT, id = true),
             Result(column = "title", property = "title", jdbcType = JdbcType.VARCHAR),
             Result(column = "body", property = "body", jdbcType = JdbcType.LONGVARCHAR),

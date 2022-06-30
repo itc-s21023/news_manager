@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    //implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -25,11 +25,13 @@ dependencies {
     implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2")
     runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    //testImplementation("org.springframework.security:spring-security-test")
+    testImplementation("org.springframework.security:spring-security-test")
 
     implementation("org.mybatis.dynamic-sql:mybatis-dynamic-sql:1.4.0")
     implementation("org.mariadb.jdbc:mariadb-java-client:3.0.5")
     mybatisGenerator("org.mybatis.generator:mybatis-generator-core:1.4.1")
+
+    implementation("org.springframework.boot:spring-boot-starter-security")
 }
 
 tasks.withType<KotlinCompile> {

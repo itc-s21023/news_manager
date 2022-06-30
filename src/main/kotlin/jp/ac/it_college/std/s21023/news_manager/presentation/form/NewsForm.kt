@@ -3,6 +3,7 @@ package jp.ac.it_college.std.s21023.news_manager.presentation.form
 import jp.ac.it_college.std.s21023.news_manager.domain.model.NewsWithCategoryModel
 import jp.ac.it_college.std.s21023.news_manager.infrastructure.database.record.Category
 import java.sql.Timestamp
+import java.time.LocalDateTime
 
 data class GetNewsListResponse(val newsList: List<NewsInfo>)
 
@@ -35,3 +36,10 @@ data class CategoryInfo(
 ) {
     constructor(category: Category) : this(category.id!!, category.name!!)
 }
+
+data class RegisterNewsRequest(
+    val categoryId: Long,
+    val title: String,
+    val body: String,
+    val publishAt: LocalDateTime
+)
