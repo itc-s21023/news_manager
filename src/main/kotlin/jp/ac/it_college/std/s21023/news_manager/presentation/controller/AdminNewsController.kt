@@ -18,14 +18,16 @@ class AdminNewsController(
 ) {
     @PostMapping("/register")
     fun register(@RequestBody request: RegisterNewsRequest) {
-        News(
-            0,
-            request.title,
-            request.categoryId,
-            request.publishAt,
-            LocalDateTime.now(),
-            1,
-            request.body
+        adminNewsService.register(
+            News(
+                0,
+                request.title,
+                request.categoryId,
+                request.publishAt,
+                LocalDateTime.now(),
+                1,
+                request.body
+            )
         )
     }
 }
