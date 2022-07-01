@@ -20,13 +20,13 @@ class UserRepositoryImpl(
         return record?.let { toModel(it) }
     }
 
-    private fun toModel(recod: Users) : Users {
+    private fun toModel(record: Users) : Users {
         return Users(
-            recod.id!!,
-            recod.username!!,
-            recod.password!!,
-            recod.viewName!!,
-            recod.roleType!!
+            record.id!!,
+            record.username!!,
+            record.password!!,
+            record.viewName!!,
+            record.roleType!!
         )
     }
 
